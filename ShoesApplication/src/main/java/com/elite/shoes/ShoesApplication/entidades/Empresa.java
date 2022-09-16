@@ -13,8 +13,11 @@ public class Empresa {
     // Atributos
     @Column (name = "nombreEmpresa")
     private String nombreEmpresa;
+    @Column (name = "direccion")
     private String direccion;
+    @Column (name = "telefono")
     private String telefono;
+    @Column (name = "nit")
     private int nit;
 
 
@@ -85,4 +88,5 @@ public class Empresa {
                 ", nit=" + nit +
                 '}';
     }
+
 }

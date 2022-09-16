@@ -1,23 +1,30 @@
 package com.elite.shoes.ShoesApplication.entidades;
 
+import javax.persistence.*;
 import java.util.List;
-
+@Entity
+@Table(name="MovimientoDinero")
 public class MovimientoDinero {
-
+    //atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long Id;
+    @Column(name="usuario")
     private String usuario;
-
+    @Column(name="fecha")
     private String fecha;
-
+    @Column(name="monto")
     private static Double monto;
-
-
+    @Column(name="movimiento")
     private double movimiento;
-
+    @Column(name="tipoDeGasto")
     private String tipoDeGasto;
 
     //Nuevo Atributo
 
     //private Empresa empresa;
+    @ManyToOne
+    @JoinColumn(name = "empleado_id")
     private Empleado empleado;
 
     //private int[] gastosFijos = {4000000, 1000000, 500000};
@@ -38,6 +45,9 @@ public class MovimientoDinero {
 //VF=VP* [(1+i)^n]
 
     //------------------CONSTRUCTOR-----------------------------------------//
+
+    public MovimientoDinero() {
+    }
 
     public MovimientoDinero(String fecha, Empleado empleado, String usuario,
                             Double movimiento, String tipoDeGasto) {

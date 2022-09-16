@@ -28,7 +28,7 @@ public class Empleado {
     //private MovimientoDinero movimientoDineros;
 
     //Constructor
-    public Empleado(){
+    public Empleado(int i, String carlos, String s, String compensar, String cajero, Object o){
 
     }
 

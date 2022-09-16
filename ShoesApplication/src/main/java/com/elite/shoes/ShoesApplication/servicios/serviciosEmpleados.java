@@ -41,6 +41,10 @@ public class serviciosEmpleados {
         this.repositorioEm = repositorioEm;
     }
 
+    public serviciosEmpleados() {
+
+    }
+
     //Metodo para visualizar a partir del GET
 
     public List<Empleado> getListaEmpleados() {
